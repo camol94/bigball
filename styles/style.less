@@ -1,0 +1,135 @@
+out: style.css
+@import 'reset.less';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Open+Sans+Condensed:300');
+@header-bg-color: #ccc;
+.clearfix {
+
+}
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+body {
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.topinfo {
+  background: @header-bg-color;
+  height: 45px;
+
+  line-height: 45px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact {
+    i {
+      margin-right: 5px;
+    }
+  }
+  .social {
+    i {
+      border-radius: 50%;
+      padding: 5px;
+color: red;
+      border: 4px solid red;
+      transition: all 1s;
+      font-size: 18px;
+      &:hover {
+        color: blue;
+        border-color: blue;
+      }
+    }
+  }
+}
+.logo {
+  height: 250px;
+  text-align: center;
+  img {
+    height: 240px;
+  }
+}
+.navbar {
+  background: @header-bg-color;
+  height: 46px;
+  nav {
+    .nav-toggle {
+      display: none;
+    }
+    font-family: "Josefin Sans";
+    a {
+      text-decoration: none;
+    }
+    .first-level {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+
+      >li {
+        float: left;
+        &:hover {
+          .second-level {
+            display: block;
+          }
+          >a {
+            color: blue;
+            background: red;
+          }
+        }
+        >a {
+          color: red;
+          padding: 11px 15px;
+          display: block;
+        }
+      }
+
+    }
+    .second-level {
+      position: absolute;
+      display: none;
+      width: 160px;
+      background: blue;
+      list-style-type: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      li {
+        a {
+          width: 154px;
+          display: block;
+          color: red;
+          margin: 2px 3px;
+          border-radius: 5px;
+        }
+        &:hover {
+          a {
+            color: blue;
+            background: red;
+          }
+        }
+
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    nav {
+      .nav-toggle {
+        display: block;
+      }
+      .first-level {
+        display: none;
+      }
+    }
+  }
+}

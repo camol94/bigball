@@ -1,0 +1,238 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Open+Sans+Condensed:300');
+html,
+body {
+  border: 0;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+body {
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.topinfo {
+  background: #ccc;
+  height: 45px;
+  line-height: 45px;
+}
+.topinfo .container {
+  display: flex;
+  justify-content: space-between;
+}
+.topinfo .contact i {
+  margin-right: 5px;
+}
+.topinfo .social i {
+  border-radius: 50%;
+  padding: 5px;
+  color: red;
+  border: 4px solid red;
+  transition: all 1s;
+  font-size: 18px;
+}
+.topinfo .social i:hover {
+  color: blue;
+  border-color: blue;
+}
+.logo {
+  height: 250px;
+  text-align: center;
+}
+.logo img {
+  height: 240px;
+}
+.navbar {
+  background: #ccc;
+  height: 46px;
+}
+.navbar nav {
+  font-family: "Josefin Sans";
+}
+.navbar nav .nav-toggle {
+  display: none;
+}
+.navbar nav a {
+  text-decoration: none;
+}
+.navbar nav .first-level {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.navbar nav .first-level > li {
+  float: left;
+}
+.navbar nav .first-level > li:hover .second-level {
+  display: block;
+}
+.navbar nav .first-level > li:hover > a {
+  color: blue;
+  background: red;
+}
+.navbar nav .first-level > li > a {
+  color: red;
+  padding: 11px 15px;
+  display: block;
+}
+.navbar nav .second-level {
+  position: absolute;
+  display: none;
+  width: 160px;
+  background: blue;
+  list-style-type: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.navbar nav .second-level li a {
+  width: 154px;
+  display: block;
+  color: red;
+  margin: 2px 3px;
+  border-radius: 5px;
+}
+.navbar nav .second-level li:hover a {
+  color: blue;
+  background: red;
+}
+@media (max-width: 768px) {
+  .navbar nav .nav-toggle {
+    display: block;
+  }
+  .navbar nav .first-level {
+    display: none;
+  }
+}
